@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  // Cloudflare prefers standard fetch and edge compatibility
+  runtime: 'edge', 
 };
 
 export default nextConfig;

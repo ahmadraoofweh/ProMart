@@ -12,7 +12,7 @@
 
 # testing
 /coverage
-
+/app/admin/items/new/dummy/
 # next.js
 /.next/
 /out/

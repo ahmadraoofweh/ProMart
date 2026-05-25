@@ -1,26 +1,91 @@
 @import "tailwindcss";
 
+/* =========================
+   BASE THEME VARIABLES
+========================= */
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f172a;
+
+  --card: #ffffff;
+  --card-hover: #f8fafc;
+
+  --muted: #64748b;
+
+  --primary: #f97316;
+  --primary-hover: #ea580c;
+  --primary-soft: rgba(249, 115, 22, 0.12);
+
+  --border: rgba(15, 23, 42, 0.08);
+
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* =========================
+   DARK THEME (class based)
+========================= */
+.dark {
+  --background: #0b0f19;
+  --foreground: #f8fafc;
+
+  --card: rgba(17, 24, 39, 0.7);
+  --card-hover: rgba(17, 24, 39, 0.9);
+
+  --muted: #94a3b8;
+
+  --primary: #fb923c;
+  --primary-hover: #f97316;
+  --primary-soft: rgba(251, 146, 60, 0.14);
+
+  --border: rgba(148, 163, 184, 0.12);
+
+  --shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* =========================
+   APPLY THEME TO BODY
+========================= */
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-slideDown {
+    animation: slideDown 0.35s ease-out;
+}
+.input-style {
+  @apply rounded-xl border border-(--border) bg-(--background) p-4 outline-none focus:border-(--primary) transition-colors;
 }
