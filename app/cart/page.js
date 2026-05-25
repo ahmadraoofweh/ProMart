@@ -99,7 +99,7 @@ export default function CartPage() {
                                 return (
                                     <div 
                                         key={item.id} 
-                                        className="group flex items-center gap-6 rounded-3xl border border-(--border) bg-(--card) p-5 transition-all hover:border-(--primary-soft) hover:shadow-xl hover:shadow-(--primary-soft)"
+                                        className="group flex items-center gap-6 rounded-3xl border border-(--border) bg-(--card) p-5 transition-all hover:border-(--primary-soft)  hover:shadow-(--primary-soft)"
                                     >
                                         <img
                                             src={item.image || "/file.svg"}
@@ -182,7 +182,7 @@ export default function CartPage() {
 
                                 <button 
                                     onClick={() => router.push("/checkout")} 
-                                    className="mt-8 flex w-full items-center justify-center gap-3 rounded-2xl bg-(--primary) py-5 text-lg font-bold text-white shadow-lg shadow-(--primary-soft) transition hover:scale-[1.02] active:scale-95"
+                                    className="mt-8 flex w-full items-center justify-center gap-3 rounded-2xl bg-(--primary) py-5 text-lg font-bold text-white shadow-(--primary-soft) transition hover:scale-[1.02] active:scale-95"
                                 >
                                     Checkout Now <ArrowRight size={20} />
                                 </button>

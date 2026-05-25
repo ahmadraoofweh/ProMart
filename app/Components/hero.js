@@ -41,7 +41,7 @@ export default function Hero() {
             </p>
 
             <div className="mt-10 flex flex-wrap justify-center gap-4">
-                <button className="flex items-center gap-2 rounded-2xl bg-(--primary) px-8 py-4 font-bold text-white shadow-xl shadow-(--primary-soft) transition hover:scale-105 active:scale-95">
+                <button className="flex items-center gap-2 rounded-2xl bg-(--primary) px-8 py-4 font-bold text-white shadow-(--primary-soft) transition hover:scale-105 active:scale-95">
                     <ShoppingBag size={20} />
                     Shop Now
                 </button>

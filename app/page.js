@@ -34,7 +34,7 @@ export default function Home() {
             <div className="relative border-b border-(--border)/50">
                 <Hero />
                 {/* Visual Accent */}
-                <div className="absolute bottom-0 left-1/2 h-[1px] w-1/2 -translate-x-1/2 bg-linear-to-r from-transparent via-(--primary) to-transparent opacity-30" />
+                <div className="absolute bottom-0 left-1/2 h-px w-1/2 -translate-x-1/2 bg-linear-to-r from-transparent via-(--primary) to-transparent opacity-30" />
             </div>
 
             <div className="px-6 py-12">
