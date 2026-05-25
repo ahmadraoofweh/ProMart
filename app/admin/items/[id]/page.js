@@ -1,5 +1,5 @@
 "use client";
-
+export const runtime = 'edge';
 import { useEffect, useState, useRef } from "react"; // Added useRef
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 // Added storage imports
