@@ -1,7 +1,6 @@
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
-import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
     apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -12,10 +11,19 @@ const firebaseConfig = {
     appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
-// Fixed logic: If apps exist, get the existing one; otherwise, initialize
-const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp();
+// Add a check to ensure we have an API Key before initializing
+// This prevents the "invalid-api-key" error during the build's static generation
+let app;
+if (getApps().length === 0) {
+    if (firebaseConfig.apiKey) {
+        app = initializeApp(firebaseConfig);
+    } else {
+        // Fallback for build-time static generation
+        app = initializeApp({ apiKey: "temporary-key-for-build" });
+    }
+} else {
+    app = getApp();
+}
 
-export { app };
 export const auth = getAuth(app);
 export const db = getFirestore(app);
-export const storage = getStorage(app);
