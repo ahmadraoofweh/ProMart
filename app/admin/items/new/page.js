@@ -3,7 +3,7 @@
 import { useState, useRef } from "react";
 import { addDoc, collection } from "firebase/firestore";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { db, storage } from "../../../lib/firebase";
+import { db, storage } from "../../../lib/firebase.client";
 
 export default function AdminPage() {
     const [form, setForm] = useState({

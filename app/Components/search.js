@@ -2,7 +2,7 @@
 
 import { useEffect, useState, forwardRef, useImperativeHandle } from "react";
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "@/app/lib/firebase";
+import { db } from "@/app/lib/firebase.client";
 
 const Search = forwardRef(function Search(
 {

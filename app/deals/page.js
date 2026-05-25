@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { collection, getDocs, query, where } from "firebase/firestore";
-import { db } from "@/app/lib/firebase";
+import { db } from "@/app/lib/firebase.client";
 
 import Item from "../Components/item";
 

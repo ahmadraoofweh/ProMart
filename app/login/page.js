@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { auth } from "@/app/lib/firebase";
+import { auth } from "@/app/lib/firebase.client";
 import {
     signInWithEmailAndPassword,
     createUserWithEmailAndPassword,

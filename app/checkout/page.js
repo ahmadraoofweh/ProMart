@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { addDoc, collection, doc, getDoc, setDoc, serverTimestamp, runTransaction } from "firebase/firestore";
-import { auth, db } from "@/app/lib/firebase";
+import { auth, db } from "@/app/lib/firebase.client";
 import useCart from "@/app/hooks/useCart";
 import { useRouter } from "next/navigation";
 import { onAuthStateChanged } from "firebase/auth";

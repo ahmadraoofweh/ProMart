@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import useAuth from "@/app/hooks/useAuth";
-import { auth } from "../lib/firebase";
+import { auth } from "../lib/firebase.client";
 
 export default function AdminLayout({ children }) {
     const { user, loading } = useAuth();

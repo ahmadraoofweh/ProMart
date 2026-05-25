@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { collection, getDocs, query, where, limit } from "firebase/firestore";
-import { db } from "@/app/lib/firebase";
+import { db } from "@/app/lib/firebase.client";
 
 import BannerCarousel from "./Components/banner";
 import Item from "./Components/item";

@@ -4,7 +4,7 @@ import Link from "next/link";
 import Search from "./search";
 import useTheme from "../hooks/useTheme";
 import { signOut } from "firebase/auth";
-import { auth } from "@/app/lib/firebase";
+import { auth } from "@/app/lib/firebase.client";
 import useAuth from "../hooks/useAuth";
 import { useRouter, usePathname } from "next/navigation";
 import { useSearch } from "../context/SearchContext";

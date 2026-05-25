@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { doc, getDoc } from "firebase/firestore";
-import { db } from "@/app/lib/firebase";
+import { db } from "@/app/lib/firebase.client";
 import useCart from "@/app/hooks/useCart";
 import { Check, ShoppingBag, Truck, ShieldCheck, Star } from "lucide-react"; // install lucide-react
 

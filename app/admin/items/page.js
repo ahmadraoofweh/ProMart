@@ -10,7 +10,7 @@ import {
     onSnapshot,
 } from "firebase/firestore";
 
-import { db } from "@/app/lib/firebase";
+import { db } from "@/app/lib/firebase.client";
 
 export default function ItemsPage() {
     const [items, setItems] = useState([]);

@@ -5,7 +5,7 @@ import { doc, getDoc, updateDoc } from "firebase/firestore";
 // Added storage imports
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage"; 
 // Assuming storage is exported from firebase.ts
-import { db, storage } from "@/app/lib/firebase"; 
+import { db, storage } from "@/app/lib/firebase.client"; 
 import { useParams } from "next/navigation";
 
 export default function EditItemPage() {
